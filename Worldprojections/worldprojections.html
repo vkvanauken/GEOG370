@@ -9,22 +9,57 @@
     <h1>In this project I learned how to display images in different projections</h1>
     
     <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <p>The first thing I did in order to display the projections on QGIS was enable the indicatrix mapper, which plots circles of equal size on the projected map of choice in order to show distortion. To choose a projection on QGIS, I clicked the button in the bottom right corner of a new project on QGIS that allowed me to alter the CRS.</p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>This projection preserves direction as shown by the perfectly straight grid. Though it preserves shape and size fairly well along the equator, as one nears the poles, the size and shape of the world are distorted.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The Aitoff projection distorts size, shape, and direction- it is not on a  straight grid and the size and shape of the indicatrix vary greatly as one moves away from the Prime Meridian.</h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <h2>World Pseudo Mercator Projection</h2>
+    <h3>The Pseudo Mercator projection preserves shape and direction as shown by the grid and the uniform shape of the circles. However, size is greatly distorted as one approaches the poles, as shown by the circles by the poles that seem at least double the size of the circles along the equator.</h3>
+    <a href=".//maps/EPSG3857.png">
+    <img src=".//maps/EPSG3857.png" alt="Pseudo Mercator" width='500px'>
+    </a>
+    <h2>World Winkel I Projection</h2>
+    <h3>The Winkel I projection appears to minimally distort size, but distorts direction as shown by the bent lines making up the grid. Also distorted is the shape of parts of the world, evident from the variance of the shapes of the circles as one moves towards the poles.</h3>
+    <a href=".//maps/Winkel I.png">
+    <img src=".//maps/Winkel I.png" alt="Winkel I" width='500px'>
+    </a>
+    <h2>World Azimuthal Equidistant Projection</h2>
+    <h3>This projection distorts shape, size, and direction greatly (except for direction from the north pole directly south). Shape and size are both highly distorted. </h3>
+    <a href=".//maps/Azimuthal Equidistant.png">
+    <img src=".//maps/Azimuthal Equidistant.png" alt="Azimuthal Equidistant" width='500px'>
+    </a>
+    <h2>Equal Area Cylindrical Projection</h2>
+    <h3>The Equal Area Cylindrical Projection maintains size and direction but not shape. The grid aligning the circles is linear but the shape changes drastically as one moves away from the equator. The area of the circles, however, is consistent. </h3>
+    <a href=".//maps/Equal Area Cylindrical 1.png">
+    <img src=".//maps/Equal Area Cylindrical 1.png" alt="Equal Area Cylindrical" width='500px'>
+    </a>
+    <h2>Equidistant Conic Projection</h2>
+    <h3>The equidistant conic projection has similar distortion of size, shape, and direction to the Azimuthal Equidistantprojection, but distorts the shape of the circles less.</h3>
+    <a href=".//maps/Equidistant Conic.png">
+    <img src=".//maps/Equidistant Conic.png" alt="Equidistant Conic" width='500px'>
+    </a>
+    <h2>World Wagner IV Projection</h2>
+    <h3>The Wagner IV map appears very similar to the Winkel I projection- just a bit more stretched out, which makes me think that it has a greater distortion of distance. Shape and direction are distorted- even along the equator. However, size appears to remain fairly consistent between the circles.</h3>
+    <a href=".//maps/World Wagner IV 1.png">
+    <img src=".//maps/World Wagner IV 1.png" alt="Wagner IV" width='500px'>
+    </a>
+    <h2>World Van Der Grinten I Projection</h2>
+    <h3>This projection distorts size, shape, and direction- it is in an interesting shape that gives it a bent grid and thus distorted direction. The land masses by the poles also appear much larger as demonstrated by the large circles in those areas.</h3>
+    <a href=".//maps/Van Der Grinten.png">
+    <img src=".//maps/Van Der Grinten.png" alt="Van Der Grinten" width='500px'>
+    </a>
+    
     <p></p>
     <h2>Data used for this project</h2>
+    <h3>The indicatrix mapper on QGIS, as well as the CRS tool.</h3>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
 </body>
 </html>
