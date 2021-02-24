@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+
+   <script src = "./data/old_well_4326.geojson"></script>
+
+</head>
+<body>
+
+    <div id="mapid"></div>
+    <style>
+        #mapid{ width: 900px; height: 500px;}
+    </style>
+
+    <script>
+        var map = L.map('mapid').setView([35.91, -79.047], 17);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {}).addTo(map)
+       // L.marker([35.911271, -79.049807]).addTo(map)
+            //.bindPopup("CH 322")
+            //.openPopup();
+        
+
+        var uncIcon1 = L.icon({ 
+        iconUrl: 'https://www.pinclipart.com/picdir/middle/108-1085479_document-clipart-visitor-book-documents-library-icon-png.png',
+        iconSize: [50,50], 
+        popupAnchor: [0,0] 
+        });
+
+        var customPopup = "Wilson Library<br/><img src='https://library.unc.edu/wp-content/uploads/2019/08/wilson2.jpg'width='100px'/>";
+
+        L.marker([35.9094, -79.0497],{icon:uncIcon1}).addTo(map)
+            .bindPopup(customPopup)
+            .openPopup();
+
+        
+
+        var uncIcon2 = L.icon({
+        iconUrl: 'https://img.icons8.com/ios/452/shopping-bag--v1.png',
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+        });
+
+        var customPopup = "UNC Student Stores<br/><img src='http://unchistory.web.unc.edu/wp-content/uploads/sites/14033/2017/04/Narrative.1.png'width='100px'/>";
+
+        L.marker([35.9098, -79.0483],{icon:uncIcon2}).addTo(map)
+            .bindPopup(customPopup)
+            .openPopup();
+
+
+
+        var uncIcon3 =L.icon({
+        iconUrl:'https://static.thenounproject.com/png/21562-200.png',
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+        });
+
+        var customPopup = "Carolina Union<br/><img src='https://images.squarespace-cdn.com/content/v1/59486b3bbe65945aca816e19/1572403701041-GMG8NLC54RZ6K9N22UTA/ke17ZwdGBToddI8pDm48kPj2DCVms7d7tLeg9lnusy0UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcllyDBk-Rde3pMfu1yxf_Wc5HRPacxUYz359yYmtIc1fpVHwiJ4D2r7J_oJbKCrQl/UnionOutside-1-3_0.jpg'width='100px'/>"
+
+        L.marker([35.9104, -79.0476],{icon:uncIcon3}).addTo(map)
+            .bindPopup(customPopup)
+            .openPopup();
+
+        // L.geoJSON(uncwell).addTo(map)
+        //L.geoJSON(uncwell, { // a
+        //pointToLayer: function (feature, latlng) { // b
+        //return L.marker(latlng, {icon: uncIcon});}}) // c
+        //.bindPopup(customPopup) // d
+        //.addTo(map); //
+
+    </script>
+
+    
+</body>
+</html>
