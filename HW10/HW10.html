@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 10- Geoprocessing</title>
+</head>
+<body>
+<h1>Homework 10-Geoprocessing </h1>
+<h2>Victoria VanAuken</h2>
+<h3>The question that I decided to answer graphically is which historic landmarks in Raleigh are at the highest risk of flooding and thus damage. In order to assess this, I used a historic landmarks shapefile as well as a special hazard floodplains shapefile from the Wake County GIS site. I decided to create a buffer of 100 feet around the national register of historic places file as I figured that it would give the landmarks the least chance of damage in an extreme weather event. Then, I created an intersection of the FEMA hazardous floodplain and the buffer, shown in green, which  are the areas most at risk of flood damage.</h3>
+
+<a href="HW10img.png">
+    <img src="HW10img.png" alt="Raleigh floodplains and historic places map" width="500px">
+    </a>
+
+<!-- Link to your shapefile in Github and you CSV -->
+<h2>Data used for this project</h2>
+    <a href="https://data.wakegov.com/datasets/special-flood-hazard-areas-floodplain?geometry=-79.430%2C35.410%2C-77.807%2C36.190"> Link for special flood hazard areas </a>
+    <p></p>
+    <a href="https://data.wakegov.com/datasets/national-register-of-historic-places?geometry=-80.592%2C35.428%2C-76.637%2C36.208"> National Register of Historic Places dataset </a>
+    <p></p>
+    <a href="Historic_Places_Buffer.geojson"> Link to buffer vector file </a>
+    <p></p>
+    <a href="Intersection_Flood_Historic.geojson"> Link to intersection vector file</a>
+
+
+</body></html>
